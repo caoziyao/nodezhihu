@@ -2,3 +2,39 @@
 // 使用下面的命令来安装 express
 // yarn add express
 var express = require('express')
+var fs = require('fs')
+var bodyParser = require('body-parser')
+var app = express()
+
+app.use(bodyParser.json())
+
+// 配置静态文件目录
+app.use(express.static('static'))
+
+
+// 注册路由
+const registerRoutes = function(app, routes) {
+    for (var i = 0; i < routes.length; i++) {
+        var route = routes[i]
+        // 下面这段是重点
+        app[route.method](route.path, route.func)
+    }
+}
+
+
+// 导入 route/index.js 的所有路由数据
+const routeIndex = require('./route/index')
+registerRoutes(app, routeIndex.routes)
+
+
+// listen 函数的第一个参数是我们要监听的端口
+// 这个端口是要浏览器输入的
+// 默认的端口是 80
+// 所以如果你监听 80 端口的话，浏览器就不需要输入端口了
+// 但是 1024 以下的端口是系统保留端口，需要管理员权限才能使用
+var server = app.listen(8081, function () {
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("应用实例，访问地址为 http://%s:%s", host, port)
+})
