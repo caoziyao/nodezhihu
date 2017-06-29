@@ -1,3 +1,127 @@
 * {
-  background-color: #E1E1E1;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #f7f8fa;
+}
+
+#id-header {
+  background-color: white;
+  display: block;
+
+}
+
+.header-inner {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid red;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.header-logo {
+  width: 64px;
+}
+
+.header-navigation {
+  text-align: center;
+  display: inline-block;
+}
+
+.navigation-a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header-userinfo {
+}
+
+.userinfo-items {
+  padding: 10px;
+}
+
+.header-search {
+  display: inline-block;
+}
+
+.search-input {
+  display: inline-block;
+
+}
+
+.search-input input {
+  width: 310px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom:4px;
+}
+
+.search-btn{
+  display: inline-block;
+}
+
+.header-userinfo {
+
+  text-align: center;
+}
+
+.header-userinfo div{
+  display: inline-block;
+  padding-top: 4px;
+}
+
+#id-main {
+  width: 1000px;
+  display: flex;
+  padding: 0 16px;
+  margin: 10px auto;
+}
+
+.left-column {
+  width: 680px;
+  /*margin: 0 auto;*/
+  border: 1px solid red;
+  height: 800px;
+  /*display: inline-block;*/
+}
+
+.left-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #e7eaf1;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,37,55,.05);
+  box-sizing: border-box;
+}
+
+.nav-add-items {
+  padding: 5px;
+  margin: 10px;
+}
+
+.left-nav-r {
+  padding: 5px;
+  margin: 10px;
+}
+
+.right-column {
+  width: 380px;
+  height: 800px;
+  border: 1px solid red;
+  /*display: inline-block;*/
 }
