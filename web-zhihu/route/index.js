@@ -12,6 +12,7 @@ var sendHtml = function(path, response) {
     })
 }
 
+// 主页
 var index = {
   path: '/',
   method: 'get',
@@ -21,8 +22,38 @@ var index = {
   }
 }
 
+// 问题
+var question = {
+    path: '/question',
+    method: 'get',
+    func: function (request, response) {
+        var path = 'question.html'
+        sendHtml(path, response)
+    }
+}
+// 点赞
+
+
+// 踩
+
+
+// 评论
+
+
+// 分享
+
+
+// 收藏
+
+
+// 感谢
+
+
+
+
 var routes = [
     index,
+    question,
 ]
 
 module.exports.routes = routes
